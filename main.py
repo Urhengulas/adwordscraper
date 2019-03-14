@@ -19,13 +19,12 @@ def getKeywordsFromCsv(csv):
 def saveAdsAsCsv(adslist, filename="ads.csv"):
 
     with open(filename, 'w', newline='') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, delimiter=';')
 
         #adding header
         writer.writerow(['keyword'] + ['text'] + ['link'])
 
         for adObject in adslist:
-
             #iterate through ad dict
             for ad in adObject.ad_list:
                 writer.writerow([adObject.title] + [ad['text']] + [ad['ad_link']])
