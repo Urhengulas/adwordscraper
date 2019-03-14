@@ -12,6 +12,10 @@ def main():
     inputfile = sys.argv[1]
     outputfile = sys.argv[2] if len(sys.argv) > 2 else "ads.csv"
 
+    # adds .csv appendix if not done by the user
+    if ".csv" not in inputfile: inputfile = inputfile + '.csv'
+    if ".csv" not in outputfile: outputfile = outputfile + '.csv'
+
     # getting the keywords from csv file
     keywords = getKeywordsFromCsv(inputfile)
 
