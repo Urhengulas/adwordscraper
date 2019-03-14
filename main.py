@@ -2,8 +2,11 @@ from KeywordAdsScraper import KeywordAdsScraper
 
 
 def getKeywordsFromCsv(csv):
+    # reading the csv file
     file = open(csv)
     keywords = []
+
+    #sring cleaning
     for keyword in file:
         temp = keyword.replace(";", "")
         temp = temp.replace("\n", "")
@@ -13,7 +16,7 @@ def getKeywordsFromCsv(csv):
 
 
 def main():
-    # list of keywords we are scraping for
+    # getting the keywords from csv file
     keywords = getKeywordsFromCsv("test.csv")
 
     # generate an AdWordScraper-Object for each keyword
