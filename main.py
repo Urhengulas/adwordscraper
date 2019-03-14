@@ -1,3 +1,4 @@
+import csv
 from KeywordAdsScraper import KeywordAdsScraper
 
 
@@ -15,6 +16,21 @@ def getKeywordsFromCsv(csv):
     return keywords
 
 
+def saveAdsAsCsv(adslist, filename="ads.csv"):
+
+    with open(filename, 'w', newline='') as file:
+        writer = csv.writer(file)
+
+        #adding header
+        writer.writerow(['keyword'] + ['text'] + ['link'])
+
+        for adObject in adslist:
+
+            #iterate through ad dict
+            for ad in adObject.ad_list:
+                writer.writerow([adObject.title] + [ad['text']] + [ad['ad_link']])
+
+
 def main():
     # getting the keywords from csv file
     keywords = getKeywordsFromCsv("test.csv")
@@ -23,7 +39,7 @@ def main():
     keyword_ads_list = [KeywordAdsScraper(key) for key in keywords]
 
     # Print all Ads in a structured way
-    print_keyword_ads_list(keyword_ads_list)
+    saveAdsAsCsv(keyword_ads_list)
 
 
 def print_keyword_ads_list(keyword_ads_list):
