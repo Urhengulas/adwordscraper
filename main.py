@@ -1,10 +1,20 @@
 from KeywordAdsScraper import KeywordAdsScraper
 
 
+def getKeywordsFromCsv(csv):
+    file = open(csv)
+    keywords = []
+    for keyword in file:
+        temp = keyword.replace(";", "")
+        temp = temp.replace("\n", "")
+        keywords.append(temp)
+
+    return keywords
+
+
 def main():
     # list of keywords we are scraping for
-    keywords = ["refugee", "eu", "europe", "smartphone",
-                "google", "beutel", "bedrucken", "ads", "vote", "brexit"]
+    keywords = getKeywordsFromCsv("test.csv")
 
     # generate an AdWordScraper-Object for each keyword
     keyword_ads_list = [KeywordAdsScraper(key) for key in keywords]
