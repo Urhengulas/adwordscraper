@@ -17,7 +17,6 @@ def main():
         print("usage: main.py inputfile.csv [outputfile.csv]")
         return 0 # stop the program
 
-
     # adds .csv appendix if not done by the user
     if ".csv" not in inputfile: inputfile = inputfile + '.csv'
     if ".csv" not in outputfile: outputfile = outputfile + '.csv'
@@ -52,10 +51,8 @@ def getKeywordsFromCsv(csv):
         keywords = []
 
         #sring cleaning
-        for i in range(len(file)):
-            file[i] = file[i].replace(";", "")
-            file[i] = file[i].replace("\n", "")
-            keywords.append(file[i])
+        for keyword in file:
+            keywords.append(keyword.replace(";", "").replace("\n", ""))
 
         return keywords
 
