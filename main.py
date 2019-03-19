@@ -42,16 +42,16 @@ def print_keyword_ads_list(keyword_ads_list):
 
 def getKeywordsFromCsv(csv):
     # reading the csv file
-    file = open(csv)
-    keywords = []
+    with open(csv, 'r') as file:
+        keywords = []
 
-    #sring cleaning
-    for keyword in file:
-        temp = keyword.replace(";", "")
-        temp = temp.replace("\n", "")
-        keywords.append(temp)
+        #sring cleaning
+        for i in range(len(file)):
+            file[i] = file[i].replace(";", "")
+            file[i] = file[i].replace("\n", "")
+            keywords.append(file[i])
 
-    return keywords
+        return keywords
 
 def saveAdsAsCsv(adslist, filename):
 
