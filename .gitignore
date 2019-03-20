@@ -2,3 +2,5 @@ env/
 .vscode
 __*
 .ipynb_checkpoints
+test.csv
+ads.csv
