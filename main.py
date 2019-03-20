@@ -53,7 +53,8 @@ def getKeywordsFromCsv(csv):
 
         #sring cleaning
         for keyword in file:
-            keywords.append(keyword.replace(";", "").replace("\n", ""))
+            temp = keyword.replace(";", "").replace("\n", "")
+            keywords.append(temp)
 
         return keywords
 
