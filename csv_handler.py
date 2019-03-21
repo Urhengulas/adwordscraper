@@ -1,27 +1,29 @@
 import csv
 
 
-def getKeywordsFromCsv(csv):
+def get_keywords(file_name):
     # reading the csv file
-    with open(csv, 'r') as file:
+    with open(file_name, 'r') as file:
         keywords = []
 
-        #sring cleaning
+        # sring cleaning
         for keyword in file:
             temp = keyword.replace(";", "").replace("\n", "")
             keywords.append(temp)
 
         return keywords
 
-def saveAdsAsCsv(adslist, filename):
 
-    with open(filename, 'w', newline='') as file:
+def save_ads(ScraperObject, file_name="ads.csv"):
+
+    with open(file_name, 'w', newline='') as file:
         writer = csv.writer(file, delimiter=';')
 
-        #adding header
+        # adding header
         writer.writerow(['keyword'] + ['text'] + ['link'])
 
-        for adObject in adslist:
-            #iterate through ad dict
-            for ad in adObject.ad_list:
-                writer.writerow([adObject.title] + [ad['text']] + [ad['ad_link']])
+        for adScraper in ScraperObject.scraper_list:
+            # iterate through ad dict
+            for ad in adScraper.ad_list:
+                writer.writerow([adScraper.title] +
+                                [ad['text']] + [ad['ad_link']])
