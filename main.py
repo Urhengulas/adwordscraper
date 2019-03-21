@@ -1,6 +1,5 @@
 import sys
 from SearchAdsScraper import SearchAdsScraper
-import csv_handler
 
 
 def main():
