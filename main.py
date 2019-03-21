@@ -6,8 +6,7 @@ def main():
     """
         make the scraper via CLI available
 
-        usage:
-            python main.py inputfile.csv [outputfile.csv]    
+        usage: python main.py inputfile.csv [outputfile.csv]    
     """
 
     # check user input
