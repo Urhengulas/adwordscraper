@@ -3,9 +3,7 @@ from SearchAdsScraper import SearchAdsScraper
 
 
 def main():
-    """
-    make the scraper via CLI available 
-    """
+    """make the scraper via CLI available"""
 
     # check user input
     # check if more than two arguements are given
