@@ -32,18 +32,9 @@ def main():
     saveAdsAsCsv(keyword_ads_list,outputfile)
 
 
-def print_keyword_ads_list(keyword_ads_list):
-    """Print all Ads in a structured way."""
-    for keyword_ad in keyword_ads_list:
-        print("### Keyword: {}".format(keyword_ad.title))
 
-        if not keyword_ad.ad_list:
-            print("There are no ads.")
-        else:
-            for ad in keyword_ad.ad_list:
-                print("#\tText: {}\n\tLink: {}".format(
-                    ad["text"], ad["ad_link"]))
-        print()
+    # print result
+    print(Scraper)
 
 
 if __name__ == "__main__":
