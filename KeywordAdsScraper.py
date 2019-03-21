@@ -1,7 +1,28 @@
 import scraper
+import csv_handler
 
 
-class KeywordAdsScraper():
+class SearchAdsScraper():
+    keyword_list = []
+    scraper_list = []
+    input_file_name = ""
+    output_file_name = "ads.csv"
+
+    def __init__(self, file_name):
+        self.input_file_name = file_name
+        self.keyword_list = csv_handler.get_keywords(self.input_file_name)
+
+    def scrape(self):
+        self.scraper_list = [KeywordScraper(key) for key in self.keyword_list]
+
+    def save_to_csv(self, file_name=""):
+        if not file_name:
+            file_name = self.output_file_name
+
+        csv_handler.save_ads(self, file_name)
+
+
+class KeywordScraper():
     title = ""
     url = ""
     ad_list = []
