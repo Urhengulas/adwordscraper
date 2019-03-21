@@ -4,8 +4,7 @@ from SearchAdsScraper import SearchAdsScraper
 
 def main():
     """
-    make the scraper via CLI available
-    usage: python main.py inputfile.csv [outputfile.csv]   
+    make the scraper via CLI available 
     """
 
     # check user input
