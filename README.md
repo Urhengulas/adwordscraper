@@ -17,3 +17,17 @@ To do so, we want to develop a crowd-sourcing tool, which scrapes for Google Ads
 ## Possible Obstacles
 - to scrape google searches is officially prohibited --> google.com/robots.txt
 - How to make Google think that the search is done by the people and not by the scraper.
+
+## Usage
+### install the dependencies
+```shell
+$ make dep
+```
+### activate env-ads
+```shell
+$ source env-ads/bin/activate
+```
+### scrape for keywords in .csv-file
+```shell
+$ python main.py keywords.csv [ads.csv]
+```
