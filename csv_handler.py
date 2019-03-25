@@ -11,7 +11,7 @@ def get_keywords(file_name):
             temp = keyword.replace(";", "").replace("\n", "")
             keywords.append(temp)
 
-        return keywords
+    return keywords
 
 
 def save_ads(ScraperObject, file_name="ads.csv"):
