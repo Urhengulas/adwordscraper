@@ -13,7 +13,7 @@ class SearchAdsScraper():
         self.keyword_list = csv_handler.get_keywords(self.input_file_name)
 
     def scrape(self):
-        self.scraper_list = [KeywordScraper(key) for key in self.keyword_list]
+        self.scraper_list = [_KeywordScraper(key) for key in self.keyword_list]
 
     def save_to_csv(self, file_name=""):
         if not file_name:
@@ -39,7 +39,7 @@ class SearchAdsScraper():
         return ""
 
 
-class KeywordScraper():
+class _KeywordScraper():
     title = ""
     url = ""
     ad_list = []
