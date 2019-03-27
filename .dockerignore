@@ -1,0 +1,14 @@
+data
+.vscode
+__*
+env-ads/
+pics
+selenium
+.gitattributes
+.gitignore
+Beautifulsoup#1.ipynb
+Makefile
+README.md
+sample.html
+Test Development.ipynb
+test_scraper.py
