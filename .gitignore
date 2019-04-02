@@ -3,3 +3,4 @@ env-ads/
 .vscode
 __*
 .ipynb_checkpoints
+docker-compose.yml
