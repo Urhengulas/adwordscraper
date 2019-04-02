@@ -4,3 +4,4 @@ env-ads/
 __*
 .ipynb_checkpoints
 docker-compose.yml
+*.pyc
