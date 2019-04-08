@@ -8,14 +8,14 @@ def main():
     # check user input
     # check if more than two arguements are given
     if (len(sys.argv) > 3):
-        print("usage: python main.py inputfile.csv [outputfile.csv]")
+        print("usage: python cli.py inputfile.csv [outputfile.csv]")
         return 0  # stop the program
 
     try:
         inputfile = sys.argv[1]
         outputfile = sys.argv[2] if len(sys.argv) > 2 else "ads.csv"
     except IndexError:
-        print("usage: python main.py inputfile.csv [outputfile.csv]")
+        print("usage: python cli.py inputfile.csv [outputfile.csv]")
         return 0  # stop the program
 
     # adds .csv appendix if not done by the user
