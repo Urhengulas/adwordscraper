@@ -2,3 +2,4 @@ beautifulsoup4
 urllib3
 lxml
 ipython
+ipykernel
