@@ -4,7 +4,7 @@ dep:
 	ipython kernel install --user --name=env-ads
 
 run:
-	sudo docker run --rm -v "$(shell pwd)/data:/app/data" --name adwordscraper adwordscraper python main.py data/keywords.csv
+	docker run --rm -v "$(shell pwd)/data:/app/data" --name adwordscraper adwordscraper python cli.py data/keywords.csv
 
 test:
 	python -m tests.test
