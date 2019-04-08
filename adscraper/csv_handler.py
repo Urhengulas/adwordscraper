@@ -14,7 +14,7 @@ def get_keywords(file_name):
     return keywords
 
 
-def save_ads(ScraperObject, file_name="ads.csv"):
+def save_ads(ScraperObject, file_name="data/ads.csv"):
 
     with open(file_name, 'w', newline='') as file:
         writer = csv.writer(file, delimiter=';')
