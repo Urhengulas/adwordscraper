@@ -1,5 +1,5 @@
 import sys
-from SearchAdsScraper import SearchAdsScraper
+from adscraper.SearchAdsScraper import SearchAdsScraper
 
 
 def main():
