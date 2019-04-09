@@ -7,6 +7,16 @@ def main():
 
     inputfile, outputfile = handle_input(sys.argv)
 
+    # generate the SearchAdsScraper-Object with the <inputfile>
+    # (scrapes automatically)
+    Scraper = SearchAdsScraper(inputfile)
+
+    # print result via SearchAdsScraper.__str__()
+    print(Scraper)
+
+    # save results to <outputfile>
+    Scraper.save_to_csv(outputfile)
+
 
 def handle_input(sys_argv):
     # TODO: catch if inputfile doesn't exist
@@ -40,17 +50,6 @@ def get_filenames_from_input(sys_argv):
 
     return inputfile, outputfile
 
-    # generate the SearchAdsScraper-Object with the <inputfile>
-    Scraper = SearchAdsScraper(inputfile)
-
-    # let it scrape
-    Scraper.scrape()
-
-    # print result
-    print(Scraper)
-
-    # save results to <outputfile>
-    Scraper.save_to_csv(outputfile)
 
 def check_csv_extension(filename):
 
