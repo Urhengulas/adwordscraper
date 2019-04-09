@@ -2,15 +2,19 @@ from bs4 import BeautifulSoup
 import urllib3
 
 
-def get_site_soup(url):
-    """Get the Soup of a given Url."""
-    
-    # request given url
-    http = urllib3.PoolManager()
-    r = http.request('get', url)
+def request_website(url):
+    """Request given url"""
 
-    # format it nicely and return
-    soup = BeautifulSoup(r.data, 'lxml')
+    http = urllib3.PoolManager()
+    response = http.request('get', url)
+
+    return response
+
+
+def get_site_soup(http_request):
+    """Get the Soup of a given url"""
+
+    soup = BeautifulSoup(http_request.data, 'lxml')
 
     return soup
 

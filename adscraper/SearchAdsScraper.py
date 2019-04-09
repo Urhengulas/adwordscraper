@@ -47,7 +47,10 @@ class _KeywordScraper():
         return link
 
     def get_ad_list(self):
-        soup = scraper.get_site_soup(self.url)
+
+        http_request = scraper.request_website(self.url)
+        soup = scraper.get_site_soup(http_request)
         ad_list = scraper.parse_for_filter(
             soup, filter=("li", {"class": "ads-ad"}))
+
         return ad_list
