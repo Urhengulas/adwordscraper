@@ -3,10 +3,6 @@ from . import csv_handler
 
 
 class SearchAdsScraper():
-    keyword_list = []
-    scraper_list = []
-    input_file_name = ""
-    output_file_name = "ads.csv"
 
     def __init__(self, file_name):
         self.input_file_name = file_name
@@ -37,9 +33,6 @@ class SearchAdsScraper():
 
 
 class _KeywordScraper():
-    title = ""
-    url = ""
-    ad_list = []
 
     def __init__(self, keyword):
         self.title = keyword
