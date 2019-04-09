@@ -1,3 +1,4 @@
+# use via docker (standard way)
 setup:
 	# remove old image
 	# if [ "$(shell docker images -q adwordscraper)" == "" ];then docker image rm adwordscraper;fi
@@ -30,5 +31,6 @@ notebook:
 	# start jupyter notebook
 	jupyter notebook
 
+# tests
 test:
 	python -m tests.test
