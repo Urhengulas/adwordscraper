@@ -15,11 +15,8 @@ class SearchAdsScraper():
     def scrape(self):
         self.scraper_list = [_KeywordScraper(key) for key in self.keyword_list]
 
-    def save_to_csv(self, file_name=""):
-        if not file_name:
-            file_name = self.output_file_name
-
-        csv_handler.save_ads(self, file_name)
+    def save_to_csv(self, file_name):
+        csv_handler.save_ads(self.scraper_list, file_name)
 
     def __str__(self):
         """Print all Ads in a structured way."""
