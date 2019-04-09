@@ -3,23 +3,19 @@ from . import csv_handler
 
 
 class SearchAdsScraper():
-    keyword_list = []
-    scraper_list = []
-    input_file_name = ""
-    output_file_name = "ads.csv"
+    """TODO: write definition"""
 
     def __init__(self, file_name):
         self.input_file_name = file_name
         self.keyword_list = csv_handler.get_keywords(self.input_file_name)
+        self.scrape()
 
     def scrape(self):
+        """Create a list of _KeywordScraper-objects for each keyword"""
         self.scraper_list = [_KeywordScraper(key) for key in self.keyword_list]
 
-    def save_to_csv(self, file_name=""):
-        if not file_name:
-            file_name = self.output_file_name
-
-        csv_handler.save_ads(self, file_name)
+    def save_to_csv(self, file_name):
+        csv_handler.save_ads(self.scraper_list, file_name)
 
     def __str__(self):
         """Print all Ads in a structured way."""
@@ -40,9 +36,7 @@ class SearchAdsScraper():
 
 
 class _KeywordScraper():
-    title = ""
-    url = ""
-    ad_list = []
+    """Scraper for one specific keyword"""
 
     def __init__(self, keyword):
         self.title = keyword
@@ -50,14 +44,22 @@ class _KeywordScraper():
         self.ad_list = self.get_ad_list()
 
     def generate_url(self):
+        """Generate the url to scrape for"""
+
         keyword = self.title.lower()
         split = keyword.split(" ")
         merge = "+".join(split)
         link = "http://www.google.de/search?q=" + merge
+
         return link
 
     def get_ad_list(self):
-        soup = scraper.get_site_soup(self.url)
+        """Scrape for ads for the given url
+        and save them in ad_list"""
+
+        http_request = scraper.request_website(self.url)
+        soup = scraper.get_site_soup(http_request)
         ad_list = scraper.parse_for_filter(
             soup, filter=("li", {"class": "ads-ad"}))
+
         return ad_list
