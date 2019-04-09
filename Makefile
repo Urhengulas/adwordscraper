@@ -1,8 +1,5 @@
 # use via docker (standard way)
 setup:
-	# remove old image
-	# if [ "$(shell docker images -q adwordscraper)" == "" ];then docker image rm adwordscraper;fi
-
 	# build new image
 	docker build -t adwordscraper .
 
