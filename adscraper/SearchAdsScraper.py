@@ -7,6 +7,7 @@ class SearchAdsScraper():
     def __init__(self, file_name):
         self.input_file_name = file_name
         self.keyword_list = csv_handler.get_keywords(self.input_file_name)
+        self.scrape()
 
     def scrape(self):
         self.scraper_list = [_KeywordScraper(key) for key in self.keyword_list]
