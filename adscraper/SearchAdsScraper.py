@@ -3,6 +3,7 @@ from . import csv_handler
 
 
 class SearchAdsScraper():
+    """TODO: write definition"""
 
     def __init__(self, file_name):
         self.input_file_name = file_name
@@ -10,6 +11,7 @@ class SearchAdsScraper():
         self.scrape()
 
     def scrape(self):
+        """Create a list of _KeywordScraper-objects for each keyword"""
         self.scraper_list = [_KeywordScraper(key) for key in self.keyword_list]
 
     def save_to_csv(self, file_name):
@@ -34,6 +36,7 @@ class SearchAdsScraper():
 
 
 class _KeywordScraper():
+    """Scraper for one specific keyword"""
 
     def __init__(self, keyword):
         self.title = keyword
@@ -41,13 +44,18 @@ class _KeywordScraper():
         self.ad_list = self.get_ad_list()
 
     def generate_url(self):
+        """Generate the url to scrape for"""
+
         keyword = self.title.lower()
         split = keyword.split(" ")
         merge = "+".join(split)
         link = "http://www.google.de/search?q=" + merge
+
         return link
 
     def get_ad_list(self):
+        """Scrape for ads for the given url
+        and save them in ad_list"""
 
         http_request = scraper.request_website(self.url)
         soup = scraper.get_site_soup(http_request)
