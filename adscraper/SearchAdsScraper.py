@@ -1,5 +1,5 @@
-import scraper
-import csv_handler
+from . import scraper
+from . import csv_handler
 
 
 class SearchAdsScraper():

@@ -1,14 +1,10 @@
-data
-.vscode
-__*
+__pycache__/
+.vscode/
+data/
+docs/
 env-ads/
-pics
-selenium
+tests/
 .gitattributes
 .gitignore
-Beautifulsoup#1.ipynb
 Makefile
 README.md
-sample.html
-Test Development.ipynb
-test_scraper.py

@@ -19,15 +19,30 @@ To do so, we want to develop a crowd-sourcing tool, which scrapes for Google Ads
 - How to make Google think that the search is done by the people and not by the scraper.
 
 ## Usage
-### install the dependencies
+### standard usage
+The standard way to use the scraper is via docker:
+#### create docker image
 ```shell
-$ make dep
+$ make setup
 ```
-### activate env-ads
+#### run scraper for keywords in keywords.csv-file
 ```shell
-$ source env-ads/bin/activate
+$ make run
 ```
-### scrape for keywords in .csv-file
+
+### python script usage
+You can also use the via scraper via the python script:
+#### create python virtualenv and install dependencies 
+(+ register ipython kernel)
 ```shell
-$ python main.py keywords.csv [ads.csv]
+$ make python-setup
+```
+#### run scraper for keywords in keywords.csv-file
+```shell
+$ make python-run
+```
+
+#### (optional) open jupyter notebook
+```shell
+$ make notebok
 ```
