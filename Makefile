@@ -30,7 +30,7 @@ notebook:
 
 # tests
 test:
-	python -m tests.test
+	pytest
 
 lint:
 	pylint adscraper
