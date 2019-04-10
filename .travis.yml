@@ -7,5 +7,5 @@ python:
 
 # command to run tests
 script: 
-  pytest
-  pylint adscraper
+  - pytest
+  -  pylint adscraper
