@@ -19,7 +19,6 @@ def main():
 
 
 def handle_input(sys_argv):
-    # TODO: catch if inputfile doesn't exist
     check_input(sys_argv)
 
     inputfile, outputfile = get_filenames_from_input(sys_argv)

@@ -22,14 +22,14 @@ class SearchAdsScraper():
 
         ret = ""
 
-        for scraper in self.scraper_list:
+        for keyword_scraper in self.scraper_list:
 
-            ret += "### Keyword: {}\n".format(scraper.title)
+            ret += "### Keyword: {}\n".format(keyword_scraper.title)
 
-            if not scraper.ad_list:
+            if not keyword_scraper.ad_list:
                 ret += "There are no ads.\n"
             else:
-                for ad in scraper.ad_list:
+                for ad in keyword_scraper.ad_list:
                     ret += "#\tText: {}\n\tLink: {}\n\n".format(
                         ad["text"], ad["ad_link"]
                     )
@@ -62,6 +62,5 @@ class _KeywordScraper():
         http_request = scraper.request_website(self.url)
         soup = scraper.get_site_soup(http_request)
         ad_list = scraper.parse_for_filter(
-            soup, filter=("li", {"class": "ads-ad"}))
-
+            soup, terms=("li", {"class": "ads-ad"}))
         return ad_list

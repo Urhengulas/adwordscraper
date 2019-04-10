@@ -27,4 +27,9 @@ notebook:
 
 # tests
 test:
-	python -m tests.test
+	pytest
+
+lint:
+	env-ads/bin/pylint adscraper
+	env-ads/bin/pylint tests
+	env-ads/bin/pylint cli.py

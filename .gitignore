@@ -6,3 +6,4 @@ docker-compose.yml
 *.pyc
 data/ads.csv
 .ipynb_checkpoints
+*.swp
