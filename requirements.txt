@@ -5,3 +5,4 @@ ipython
 ipykernel
 pytest
 pylint
+autopep8

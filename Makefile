@@ -15,9 +15,6 @@ python-setup:
 	# install requirements
 	env-ads/bin/pip install -r requirements.txt
 
-	# update the ipython kernel (for jupyter notebooks)
-	ipython kernel install --user --name=env-ads
-
 python-run:
 	python cli.py data/keywords.csv data/ads.csv
 
