@@ -1,5 +1,6 @@
 import pytest
 from adscraper import csv_handler
+from adscraper import scraper
 
 
 def test_get_keywords():
