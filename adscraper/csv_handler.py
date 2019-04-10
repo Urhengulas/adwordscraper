@@ -16,7 +16,7 @@ def get_keywords(file_name):
     return keywords
 
 
-def save_ads(scraper_object, file_name="data/ads.csv"):
+def save_ads(scraper_list, file_name="data/ads.csv"):
     '''saves ads to csv file '''
 
     with open(file_name, 'w', newline='') as file:
@@ -25,7 +25,7 @@ def save_ads(scraper_object, file_name="data/ads.csv"):
         # adding header
         writer.writerow(['keyword'] + ['text'] + ['link'])
 
-        for ad_scraper in scraper_object.scraper_list:
+        for ad_scraper in scraper_list:
             # iterate through ad dict
             for ad in ad_scraper.ad_list:
                 writer.writerow([ad_scraper.title] +
