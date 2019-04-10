@@ -22,14 +22,14 @@ class SearchAdsScraper():
 
         ret = ""
 
-        for scraper in self.scraper_list:
+        for keyword_scraper in self.scraper_list:
 
-            ret += "### Keyword: {}\n".format(scraper.title)
+            ret += "### Keyword: {}\n".format(keyword_scraper.title)
 
-            if not scraper.ad_list:
+            if not keyword_scraper.ad_list:
                 ret += "There are no ads.\n"
             else:
-                for ad in scraper.ad_list:
+                for ad in keyword_scraper.ad_list:
                     ret += "#\tText: {}\n\tLink: {}\n\n".format(
                         ad["text"], ad["ad_link"]
                     )
