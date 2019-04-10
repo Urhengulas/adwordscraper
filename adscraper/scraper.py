@@ -4,7 +4,7 @@ import urllib3
 
 def request_website(url):
     """Request given url"""
-    
+
     http = urllib3.PoolManager()
     response = http.request('get', url)
 
