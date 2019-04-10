@@ -4,7 +4,7 @@ import urllib3
 
 def get_site_soup(url):
     """Get the Soup of a given Url."""
-    
+
     # request given url
     http = urllib3.PoolManager()
     r = http.request('get', url)

@@ -6,4 +6,6 @@ python:
   - "3.6"
 
 # command to run tests
-script: pytest
+script: 
+  pytest
+  pylint adscraper
