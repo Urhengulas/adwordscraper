@@ -15,11 +15,11 @@ def get_site_soup(url):
     return soup
 
 
-def parse_for_filter(soup, filter=("li", {"class": "ads-ad"})):
+def parse_for_filter(soup, terms=("li", {"class": "ads-ad"})):
     """Parses the given soup for given filters."""
 
     # get a list of all the elements, which shall be filtered for
-    specific = soup.find_all(filter[0], filter[1])
+    specific = soup.find_all(terms[0], terms[1])
 
     # get list of information about the elements and save each in a dictionary
     entry_list = []
