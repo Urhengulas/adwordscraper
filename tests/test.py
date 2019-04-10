@@ -1,5 +1,5 @@
-from adscraper import scraper
 from bs4 import BeautifulSoup
+from adscraper import scraper
 
 
 def test_parse_for_filter():
