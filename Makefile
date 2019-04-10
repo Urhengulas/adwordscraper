@@ -31,3 +31,6 @@ notebook:
 # tests
 test:
 	python -m tests.test
+
+lint:
+	pylint adscraper
