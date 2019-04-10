@@ -5,6 +5,14 @@ language: python
 python:
   - "3.6"
 
+services:
+  - docker
+
+before_install:
+  - docker build -t adscraper .
+  - docker ps -a
+  - docker run --rm -v "$(shell pwd)/data:/app/data" --name adwordscraper adwordscraper python cli.py data/keyword
+
 # command to run tests
 script: 
   - pytest
