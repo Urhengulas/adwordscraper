@@ -11,7 +11,7 @@ services:
 before_install:
   - docker build -t adwordscraper .
   - docker ps -a
-  - docker run --rm -v "$(shell pwd)/data:/app/data" --name adwordscraper adwordscraper python cli.py data/keyword
+  - docker run --rm -v "$(bash pwd)/data:/app/data" --name adwordscraper adwordscraper python cli.py data/keyword
 
 # command to run tests
 script: 
