@@ -30,4 +30,6 @@ test:
 	pytest
 
 lint:
-	pylint adscraper
+	env-ads/bin/pylint adscraper
+	env-ads/bin/pylint tests
+	env-ads/bin/pylint cli.py
