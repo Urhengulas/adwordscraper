@@ -23,14 +23,14 @@ class SearchAdsScraper():
 
     def __str__(self):
         """Print all Ads in a structured way."""
-        for scraper in self.scraper_list:
+        for ad_element in self.scraper_list:
 
-            print("### Keyword: {}".format(scraper.title))
+            print("### Keyword: {}".format(ad_element.title))
 
-            if not scraper.ad_list:
+            if not ad_element.ad_list:
                 print("There are no ads.")
             else:
-                for ad in scraper.ad_list:
+                for ad in ad_element.ad_list:
                     print(
                         "#\tText: {}\n\tLink: {}\n".format(
                             ad["text"], ad["ad_link"]
