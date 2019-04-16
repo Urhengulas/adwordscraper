@@ -18,6 +18,7 @@ python-setup:
 python-run:
 	python cli.py data/keywords.csv data/ads.csv
 
+# additional commands
 notebook:
 	# update the ipython kernel (for jupyter notebooks)
 	ipython kernel install --user --name=env-ads
@@ -25,7 +26,6 @@ notebook:
 	# start jupyter notebook
 	jupyter notebook
 
-# tests
 test:
 	pytest
 
