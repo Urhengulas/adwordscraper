@@ -1,6 +1,5 @@
-from bs4 import BeautifulSoup
-from adscraper import scraper
 import pickle
+from adscraper import scraper
 
 
 def test_request_website():
