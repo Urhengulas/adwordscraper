@@ -55,7 +55,8 @@ def get_filenames_from_arguments(sys_argv):
         else:
             outputfile = "ads.csv"
     except IndexError:
-        assert False, "usage: python cli.py inputfile.csv [outputfile.csv]"
+        print("usage: python cli.py inputfile.csv [outputfile.csv]")
+        exit()
 
     return inputfile, outputfile
 
