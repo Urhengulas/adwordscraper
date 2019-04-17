@@ -11,10 +11,10 @@ def request_website(url):
     return response
 
 
-def get_site_soup(http_request):
+def get_site_soup(http_request_data):
     """Get the Soup of a given url"""
 
-    soup = BeautifulSoup(http_request.data, 'lxml')
+    soup = BeautifulSoup(http_request_data, 'lxml')
 
     return soup
 

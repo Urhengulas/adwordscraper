@@ -60,7 +60,7 @@ class _KeywordScraper():
         and save them in ad_list"""
 
         http_request = scraper.request_website(self.url)
-        soup = scraper.get_site_soup(http_request)
+        soup = scraper.get_site_soup(http_request.data)
         ad_list = scraper.parse_for_filter(
             soup, terms=("li", {"class": "ads-ad"}))
         return ad_list
