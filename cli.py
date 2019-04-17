@@ -26,6 +26,8 @@ def handle_input(sys_argv):
     inputfile = check_csv_extension(inputfile)
     outputfile = check_csv_extension(outputfile)
 
+    check_name(inputfile)
+
     return inputfile, outputfile
 
 
@@ -35,6 +37,13 @@ def check_number_of_arguments(sys_argv):
     assert (len(sys_argv) >= 1 and len(sys_argv) <= 3), \
         "usage: python cli.py inputfile.csv [outputfile.csv]"
 
+def check_name(file):
+    """ check if given file does exit """
+    try:
+        open(file)
+    except FileNotFoundError:
+        print('This file does not exist')
+        exit()
 
 
 def get_filenames_from_arguments(sys_argv):
