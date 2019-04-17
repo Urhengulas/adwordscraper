@@ -21,10 +21,9 @@ def main():
 def handle_input(sys_argv):
     check_number_of_arguments(sys_argv)
 
-    inputfile, outputfile = get_filenames_from_input(sys_argv)
+    inputfile, outputfile = get_filenames_from_arguments(sys_argv)
 
     inputfile = check_csv_extension(inputfile)
-
     outputfile = check_csv_extension(outputfile)
 
     return inputfile, outputfile
@@ -38,7 +37,7 @@ def check_number_of_arguments(sys_argv):
 
 
 
-def get_filenames_from_input(sys_argv):
+def get_filenames_from_arguments(sys_argv):
     try:
         inputfile = sys.argv[1]
 
