@@ -31,7 +31,7 @@ class SearchAdsScraper():
             else:
                 for ad in keyword_scraper.ad_list:
                     ret += "#\tText: {}\n\tLink: {}\n\n".format(
-                        ad["text"], ad["ad_link"]
+                        ad["text"].encode('utf-8'), ad["ad_link"].encode('utf-8')
                     )
 
         return ret
