@@ -19,33 +19,43 @@ def main():
 
 
 def handle_input(sys_argv):
-    check_input(sys_argv)
+    check_number_of_arguments(sys_argv)
 
-    inputfile, outputfile = get_filenames_from_input(sys_argv)
+    inputfile, outputfile = get_filenames_from_arguments(sys_argv)
 
     inputfile = check_csv_extension(inputfile)
     outputfile = check_csv_extension(outputfile)
 
+    check_name(inputfile)
+
     return inputfile, outputfile
 
 
-def check_input(sys_argv):
+def check_number_of_arguments(sys_argv):
     """check if more than two arguements are given"""
 
-    assert (len(sys_argv) >= 1 and len(sys_argv) <= 3), \
+    assert (len(sys_argv) > 1 and len(sys_argv) <= 3), \
         "usage: python cli.py inputfile.csv [outputfile.csv]"
 
 
-def get_filenames_from_input(sys_argv):
+def check_name(file):
+    """ check if given file does exit """
     try:
-        inputfile = sys.argv[1]
+        open(file)
+    except FileNotFoundError:
+        print('This file does not exist')
+        exit()
 
-        if len(sys_argv) > 2:
-            outputfile = sys.argv[2]
-        else:
-            outputfile = "ads.csv"
-    except IndexError:
-        assert False, "usage: python cli.py inputfile.csv [outputfile.csv]"
+
+def get_filenames_from_arguments(sys_argv):
+
+    inputfile = sys_argv[1]
+
+    if len(sys_argv) > 2:
+        outputfile = sys_argv[2]
+    else:
+        outputfile = "ads.csv"
+
 
     return inputfile, outputfile
 
