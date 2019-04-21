@@ -37,6 +37,7 @@ def check_number_of_arguments(sys_argv):
     assert (len(sys_argv) > 1 and len(sys_argv) <= 3), \
         "usage: python cli.py inputfile.csv [outputfile.csv]"
 
+
 def check_name(file):
     """ check if given file does exit """
     try:

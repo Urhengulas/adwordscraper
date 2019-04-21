@@ -17,6 +17,7 @@ def test_number_of_arguments():
         cli.check_number_of_arguments([])
         cli.check_number_of_arguments([1])
 
+
 def test_get_filenames_from_arguments():
 
     # check if filenames get parsed correctly
@@ -27,6 +28,7 @@ def test_get_filenames_from_arguments():
     file1, file2 = cli.get_filenames_from_arguments(['placeholder', 'foo.csv'])
     assert file1 == 'foo.csv' and file2 == 'ads.csv'
 
+
 def test_check_name():
 
     #check if exsiting file gets recogniced
@@ -36,6 +38,7 @@ def test_check_name():
     with pytest.raises(SystemExit):
         cli.check_name('data/foo.csv')
         cli.check_name('asdf')
+
 
 def test_check_csv_extension():
 
