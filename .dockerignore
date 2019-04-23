@@ -1,10 +1,15 @@
-__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
 .vscode/
+__pycache__/
 data/
 docs/
 env-ads/
 tests/
 .gitattributes
 .gitignore
+.travis.yml
+docker-compose.yml
 Makefile
+pylintrc
 README.md
