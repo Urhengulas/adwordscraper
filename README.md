@@ -2,47 +2,69 @@
 Scraper for Google Ads
 ___
 
-## Hypothesis
-There are different Google Ads for different users.
+## Table of content
 
-## Approach
-We want to validate that hypothesis and try to understand the underlying structure.
-To do so, we want to develop a crowd-sourcing tool, which scrapes for Google Ads with the different Google Identities of all users.
+- [About](#about)
+- [Getting started](#getting-started)
+  - [development usage](#development-usage)
+  - [production usage](#production-usage)
+- [Documentation](#documentation)
+- [Collaboration](#collaboration)
 
-## Open Questions
-- How do the results differ by
-    - user
-    - location
+## About
+Searchig at google besides the normal search results also shows you `SearchAds`, which are fitting to the searched term. Also there are different SearchAds for different users.  
+We assume that there are also political SearchAds. Probably they are only shown for specific search terms, to specific people (specific countries, ethnic groups, ...).
 
-## Possible Obstacles
-- to scrape google searches is officially prohibited --> google.com/robots.txt
-- How to make Google think that the search is done by the people and not by the scraper.
+We want to validate our hypothesis and try to understand the underlying structure of Google SearchAds.
 
-## Usage
-### standard usage
-The standard way to use the scraper is via docker:
-#### create docker image
+To do so, we already devloped the `adscraper`-module, which makes it possible to scrape SearchAds for a list of search terms.
+The `cli.py` makes that functionality available as CLI-tool. It takes a csv-file with search terms as input (default: data/keywords.csv) and outputs a csv-file with all the SearchAds it found for the terms.
+
+## Getting started
+
+**clone repo**
 ```shell
-$ make setup
-```
-#### run scraper for keywords in keywords.csv-file
-```shell
-$ make run
+$ git clone https://github.com/Urhengulas/adwordscraper.git
 ```
 
-### python script usage
-You can also use the via scraper via the python script:
-#### create python virtualenv and install dependencies 
-(+ register ipython kernel)
+### development usage
+> (directly via python)  
+> More convenient for experimenting
+
 ```shell
+$ # install dependencies
 $ make python-setup
-```
-#### run scraper for keywords in keywords.csv-file
-```shell
+
+$ # run scraper for keywords in `data/keywords.csv`
 $ make python-run
 ```
 
-#### (optional) open jupyter notebook
+### production usage
+> (with docker)  
+> Makes it easier to scale the scraping.
+
+```shell
+$ # create docker image (only repeat after changing sourcecode)
+$ make docker-setup
+
+$ # run scraper for keywords in `data/keywords.csv`
+$ make docker-run
+```
+
+**_(optional) run tests and lint-checking_**
+```shell
+$ make test
+$ make lint
+```
+
+**_(optional) open jupyter notebook (with env-ads-kernel)_**
 ```shell
 $ make notebok
 ```
+
+## Documentation
+Documenation about the individual parts of the software you can find [here](docs/documentation.md).
+
+## Collaboration
+Details about how to collaborate you can find [here](docs/collaboration.md).
+
