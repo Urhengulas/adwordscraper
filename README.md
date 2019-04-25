@@ -63,8 +63,7 @@ $ make notebok
 ```
 
 ## Documentation
-Documenation about the individual parts of the software you can find [here](docs/documentation.md).
+Documenation about the adscraper module you can find [here](adscraper/DOCUMENTATION.md).
 
 ## Collaboration
-Details about how to collaborate you can find [here](docs/collaboration.md).
-
+Details about how to collaborate you can find [here](docs/COLLABORATION.md).
