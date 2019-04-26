@@ -36,13 +36,14 @@ Every contributor picks and manages her tasks on her own. Always communicate wit
 ### Trello Board structure
 
 We have 5 columns:
+
 | Column | Which tasks should be there |
-| :--- | :---
-| Backlog| _Tasks which are not urgend_
-| Todo| _Tasks which should be worked on next_
-| In Progess| _Tasks which have people (and a deadline) assigned_
-| To review| _Finished tasks which need to be signed off_
-| Done| _Finished tasks_
+| :--- | :--- |
+| Backlog| _Tasks which are not urgend_ |
+| Todo| _Tasks which should be worked on next_ |
+| In Progess| _Tasks which have people (and a deadline) assigned_ |
+| To review| _Finished tasks which need to be signed off_ |
+| Done| _Finished tasks_ |
 
 ### Trello Card conventions
 
