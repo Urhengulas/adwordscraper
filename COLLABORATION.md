@@ -13,12 +13,12 @@ The Adwordscraper is no open source project. It is developed in the context of t
     - [Trello Card conventions](#trello-card-conventions)
   - [Task filing](#task-filing)
   - [Git Branching Model](#git-branching-model)
-    - [master branch](#master-branch)
-    - [feature branches](#feature-branches)
+    - [Master branch](#master-branch)
+    - [Feature branches](#feature-branches)
     - [Pull requests](#pull-requests)
       - [Pull request template](#pull-request-template)
       - [Conditions to pass](#conditions-to-pass)
-    - [commit messages](#commit-messages)
+    - [Commit messages](#commit-messages)
   - [Testing](#testing)
   - [Style guideline](#style-guideline)
 
@@ -76,11 +76,11 @@ Try to apply the [Trello Card conventions](#trello-card-conventions).
 
 Our branching model is inspired by [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), but we are using a clearly reduced version.
 
-### master branch
+### Master branch
 
 We have a `master` branch, which aims to be stable all the time.
 
-### feature branches
+### Feature branches
 
 Besides that we have feature branches.
 - they are always the equivalent to a Trello Card
@@ -105,7 +105,7 @@ We provide a [**Pull request template**](PULL_REQUEST_TEMPLATE.md) which automat
 - make sure your branch follows the style guidelines
 - adapt documentation to the changes
 
-### commit messages
+### Commit messages
 I would suggest to read this article ["How to Write a Git Commit Message"](https://chris.beams.io/posts/git-commit/) to everyone.  
 TL;DR
 1. Limit the subject line to 50 characters

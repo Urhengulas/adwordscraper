@@ -4,25 +4,25 @@
 
 - [Documentation for `adscraper` module](#documentation-for-adscraper-module)
   - [Table of Content](#table-of-content)
-  - [SearchAdsScraper](#searchadsscraper)
-    - [SearchAdsScraper.SearchAdsScraper()](#searchadsscrapersearchadsscraper)
+  - [`SearchAdsScraper`](#searchadsscraper)
+    - [`SearchAdsScraper.SearchAdsScraper()`](#searchadsscrapersearchadsscraper)
       - [Parameters](#parameters)
       - [Examples](#examples)
       - [Attributes](#attributes)
       - [Methods](#methods)
-    - [SearchAdsScraper._KeywordScraper()](#searchadsscraperkeywordscraper)
+    - [`SearchAdsScraper._KeywordScraper()`](#searchadsscraperkeywordscraper)
       - [Parameters](#parameters-1)
       - [Examples](#examples-1)
       - [Attributes](#attributes-1)
       - [Methods](#methods-1)
-  - [scraper](#scraper)
+  - [`scraper`](#scraper)
     - [functions](#functions)
-  - [csv_handler](#csvhandler)
+  - [`csv_handler`](#csvhandler)
     - [functions](#functions-1)
 
-## SearchAdsScraper
+## `SearchAdsScraper`
 
-### SearchAdsScraper.SearchAdsScraper()
+### `SearchAdsScraper.SearchAdsScraper()`
 > class SearchAdsScraper.SearchAdsScraper(inputfile)
  
 An `SearchAdsScraper` is a container, which contains a list of `_KeywordScraper`-objects for all the keywords in a given `inputfile`.
@@ -56,9 +56,9 @@ While initializing it first generates a list of all keywords (`self.keyword_list
 | :--- | :--- |
 | `scrape()` | Scrapes for all keywords in `self.keyword_list`
 | `save_to_csv(file_name)` | Saves all ads to the csv file file_name
-| `__str__` | Provides representation if e.g. `print()` is called on the object
+| `__str__()` | Provides representation if e.g. `print()` is called on the object
 
-### SearchAdsScraper._KeywordScraper()
+### `SearchAdsScraper._KeywordScraper()`
 > (private) class SearchAdsScraper._KeywordScraper(keyword)
 
 An `_KeywordScraper` is a container for all the Google SearchAds for one single search keyword.  
@@ -95,7 +95,7 @@ While initializing it first generates the to-be-searched url  (`self.url`) and t
 | `get_ad_list(file_name)` | Scrapes `self.url` for ads
 
 
-## scraper
+## `scraper`
 > module which provides functionalitites related to scraping to the `SearchAdsScraper` and `_KeywordScraper`
 
 ### functions 
@@ -104,9 +104,9 @@ While initializing it first generates the to-be-searched url  (`self.url`) and t
 | :--- | :--- | :--- |
 | `request_website(url)` | `urllib3.response.HTTPResponse` | Sends `GET`-request to `url`
 | `get_site_soup(http_request_data)` | `bs4.BeautifulSoup` | Converts `http_request_data` to an `bs4.BeautifulSoup`-obj
-| `parse_for_filter(soup, terms=`<br/>`("li", {"class": "ads-ad"}))` | `list` of `dict`s | Extracts the ads (with the pattern `terms`) from `soup`
+| `parse_for_filter(soup, terms=("li", {"class": "ads-ad"}))` | `list` of `dict`s | Extracts the ads (with the pattern `terms`) from `soup`
 
-## csv_handler
+## `csv_handler`
 > module which provides functionalities related to handling csv files to the `SearchAdsScraper` and `_KeywordScraper`
 
 ### functions

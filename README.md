@@ -8,19 +8,19 @@ ___
   - [Table of content](#table-of-content)
   - [About](#about)
   - [Getting started](#getting-started)
-    - [development usage](#development-usage)
-    - [production usage](#production-usage)
+    - [Development usage](#development-usage)
+    - [Production usage](#production-usage)
   - [Documentation](#documentation)
   - [Collaboration](#collaboration)
 
 ## About
-Searchig at google besides the normal search results also shows you `SearchAds`, which are fitting to the searched term. Also there are different SearchAds for different users.  
-We assume that there are also political SearchAds. Probably they are only shown for specific search terms, to specific people (specific countries, ethnic groups, ...).
+Searchig at google, besides the normal search results, also shows you `SearchAds`, which are fitting to the searched term. These differ for different users.  
+We assume that there are political SearchAds at Google. Probably they are only shown for specific search terms, to specific people (specific countries, ethnic groups, ...).
 
-We want to validate our hypothesis and try to understand the underlying structure of Google SearchAds.
+We want to validate this hypothesis and try to understand the underlying structure of Google SearchAds.
 
-To do so, we already devloped the `adscraper`-module, which makes it possible to scrape SearchAds for a list of search terms.
-The `cli.py` makes that functionality available as CLI-tool. It takes a csv-file with search terms as input (default: data/keywords.csv) and outputs a csv-file with all the SearchAds it found for the terms.
+To do so, we already devloped the [`adscraper`-module](adscraper/), which makes it possible to scrape SearchAds for a list of search terms.
+The [`cli.py`](cli.py) makes that functionality available as CLI-tool. It takes a csv-file with search terms as input (default: data/keywords.csv) and outputs a csv-file with all the SearchAds it found for the terms.
 
 ## Getting started
 
@@ -29,7 +29,7 @@ The `cli.py` makes that functionality available as CLI-tool. It takes a csv-file
 $ git clone https://github.com/Urhengulas/adwordscraper.git
 ```
 
-### development usage
+### Development usage
 > (directly via python)  
 > More convenient for experimenting
 
@@ -41,7 +41,7 @@ $ # run scraper for keywords in `data/keywords.csv`
 $ make python-run
 ```
 
-### production usage
+### Production usage
 > (with docker)  
 > Makes it easier to scale the scraping.
 
@@ -53,7 +53,7 @@ $ # run scraper for keywords in `data/keywords.csv`
 $ make docker-run
 ```
 
-**_(optional) run tests and lint-checking_**
+run tests and lint-checking
 ```shell
 $ make test
 $ make lint
