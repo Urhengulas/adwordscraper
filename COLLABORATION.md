@@ -92,7 +92,10 @@ Besides that we have feature branches.
 
 ### Pull requests
 
-To merge features into master you have to create a pull request. This needs to be reviewed from at least one other developer.
+To merge features into master you have to create a pull request.  
+Requirements:
+- needs to be reviewed from at least one other developer
+- only do 'merge'-pull requests _(no 'squash and merge', or 'rebase and merge')_
 
 #### Pull request template
 
