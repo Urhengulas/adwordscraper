@@ -29,8 +29,8 @@ To start collaborating you need four things:
 - access to the private GitHub-Repo [`Urhengulas/adwordscraper`](https://github.com/Urhengulas/adwordscraper)  
   _(you probably have that, if you are reading this ;D )_
 - access to the Trello Board [`correctiv - CODE/Adwordscraper`](https://trello.com/b/wHsCHEqk/adwordscraper)
-- working installation of [Python 3.6+](https://www.python.org/about/gettingstarted/)
-- working installation of [docker](https://docs.docker.com/install/)
+- working installation of [Python (version: 3.6+)](https://www.python.org/about/gettingstarted/)
+- working installation of [Docker (version: 18.09.5)](https://docs.docker.com/install/)
 
 
 ## Task Management
