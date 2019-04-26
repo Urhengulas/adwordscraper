@@ -119,3 +119,8 @@ $ make test
 
 We are basically follwing the official [PEP8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) with some additions (visible in [`.pylintrc`](../.pylintrc)).  
 This is checked by [pylint](https://www.pylint.org/).
+
+To check the linting
+```shell
+$ make lint
+```
