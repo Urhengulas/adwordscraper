@@ -112,6 +112,9 @@ TL;DR
 1. Do not end the subject line with a period
 1. Use the imperative mood in the subject line
 
+   e.g. `"Create test_parse_for_filter in test_scraper.py"`  
+   instead of [`"created test_scraper.py. created unit test test_parse_for_filter()"`](https://github.com/Urhengulas/adwordscraper/commit/4500a242e4561bcaa86b4564befab5f00baebf57)
+
 
 ## Testing
 
