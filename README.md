@@ -66,4 +66,4 @@ $ make notebok
 Documenation about the adscraper module you can find [here](adscraper/DOCUMENTATION.md).
 
 ## Collaboration
-Details about how to collaborate you can find [here](docs/COLLABORATION.md).
+Details about how to collaborate you can find [here](COLLABORATION.md).

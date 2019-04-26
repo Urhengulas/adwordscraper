@@ -52,7 +52,7 @@ We have 5 columns:
 
 ### Trello Card conventions
 
-![Trello Card example](img/trello_example.png)  
+![Trello Card example](docs/img/trello_example.png)  
 _Example Trello Card_
 
 - choose a headline with max. four words
