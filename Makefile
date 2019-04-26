@@ -1,9 +1,13 @@
+# define `make run` (convenience purposes) 
+make run:
+	make python-run
+
 # use via docker (standard way)
-setup:
+docker-setup:
 	# build new image
 	docker build -t adwordscraper .
 
-run:
+docker-run:
 	docker run --rm -v "$(shell pwd)/data:/app/data" --name adwordscraper adwordscraper python cli.py data/keywords.csv data/ads.csv
 
 

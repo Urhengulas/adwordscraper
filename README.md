@@ -2,47 +2,69 @@
 Scraper for Google Ads
 ___
 
-## Hypothesis
-There are different Google Ads for different users.
+## Table of content
 
-## Approach
-We want to validate that hypothesis and try to understand the underlying structure.
-To do so, we want to develop a crowd-sourcing tool, which scrapes for Google Ads with the different Google Identities of all users.
+- [Table of content](#table-of-content)
+- [About](#about)
+- [Getting started](#getting-started)
+  - [Development usage](#development-usage)
+  - [Production usage](#production-usage)
+- [Documentation](#documentation)
+- [Collaboration](#collaboration)
 
-## Open Questions
-- How do the results differ by
-    - user
-    - location
+## About
+Searchig at google, besides the normal search results, also shows you `SearchAds`, which are fitting to the searched term. These differ for different users.  
+We assume that there are political SearchAds at Google. Probably they are only shown for specific search terms, to specific people (specific countries, ethnic groups, ...).
 
-## Possible Obstacles
-- to scrape google searches is officially prohibited --> google.com/robots.txt
-- How to make Google think that the search is done by the people and not by the scraper.
+We want to validate this hypothesis and try to understand the underlying structure of Google SearchAds.
 
-## Usage
-### standard usage
-The standard way to use the scraper is via docker:
-#### create docker image
+To do so, we already devloped the [`adscraper`-module](adscraper/), which makes it possible to scrape SearchAds for a list of search terms.
+The [`cli.py`](cli.py) makes that functionality available as CLI-tool. It takes a csv-file with search terms as input (default: data/keywords.csv) and outputs a csv-file with all the SearchAds it found for the terms.
+
+## Getting started
+
+**clone repo**
 ```shell
-$ make setup
-```
-#### run scraper for keywords in keywords.csv-file
-```shell
-$ make run
+$ git clone https://github.com/Urhengulas/adwordscraper.git
 ```
 
-### python script usage
-You can also use the via scraper via the python script:
-#### create python virtualenv and install dependencies 
-(+ register ipython kernel)
+### Development usage
+> (directly via python)  
+> More convenient for experimenting
+
 ```shell
+$ # install dependencies
 $ make python-setup
-```
-#### run scraper for keywords in keywords.csv-file
-```shell
+
+$ # run scraper for keywords in `data/keywords.csv`
 $ make python-run
 ```
 
-#### (optional) open jupyter notebook
+### Production usage
+> (with docker)  
+> Makes it easier to scale the scraping.
+
+```shell
+$ # create docker image (only repeat after changing sourcecode)
+$ make docker-setup
+
+$ # run scraper for keywords in `data/keywords.csv`
+$ make docker-run
+```
+
+run tests and lint-checking
+```shell
+$ make test
+$ make lint
+```
+
+**_(optional) open jupyter notebook (with env-ads-kernel)_**
 ```shell
 $ make notebok
 ```
+
+## Documentation
+Documenation about the adscraper module you can find [here](adscraper/DOCUMENTATION.md).
+
+## Collaboration
+Details about how to collaborate you can find [here](COLLABORATION.md).
