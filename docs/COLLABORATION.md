@@ -77,7 +77,8 @@ Besides that we have feature branches.
 - they are always the equivalent to a Trello Card
   - please because of that link the branches to the trello card
 - they are named like the Trello Card (including the unique Id)  
-  e.g. `4-set-up-travis`
+  e.g. `4-set-up-travis`  
+  _(see end of url in picture above)_
 
 ### Pull requests
 
