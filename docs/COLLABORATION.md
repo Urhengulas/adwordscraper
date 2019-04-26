@@ -2,6 +2,7 @@
 
 The Adwordscraper is no open source project. It is developed in the context of the "STS_Correctiv_Project".
 
+
 ## Table of content
 
 - [Collaboration Guideline](#collaboration-guideline)
@@ -21,7 +22,9 @@ The Adwordscraper is no open source project. It is developed in the context of t
   - [Testing](#testing)
   - [Style guideline](#style-guideline)
 
+
 ## What do you need?
+
 To start collaborating you need four things:
 - access to the private GitHub-Repo [`Urhengulas/adwordscraper`](https://github.com/Urhengulas/adwordscraper)  
   _(you probably have that, if you are reading this ;D )_
@@ -29,7 +32,9 @@ To start collaborating you need four things:
 - working installation of [Python 3.6+](https://www.python.org/about/gettingstarted/)
 - working installation of [docker](https://docs.docker.com/install/)
 
+
 ## Task Management
+
 For task distribution and tracking we are using [`Trello`](https://trello.com/) together with its [`GitHub-Extension`](https://trello.com/power-ups/55a5d916446f517774210004/github).  
 Every contributor picks and manages her tasks on her own. Always communicate with people if you assign/mention them somewhere.
 
@@ -60,19 +65,23 @@ _Example Trello Card_
   - append branches/ pull requests
   - add who shall review a pull request to Trello AND GitHub
 
+
 ## Task filing
 
 To file a new Task (or Issue) just create a new card in Todo or Backlog, depending on its urgency.
 Try to apply the [Trello Card conventions](#trello-card-conventions).
+
 
 ## Git Branching Model
 
 Our branching model is inspired by [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), but we are using a clearly reduced version.
 
 ### master branch
+
 We have a `master` branch, which aims to be stable all the time.
 
 ### feature branches
+
 Besides that we have feature branches.
 - they are always the equivalent to a Trello Card
   - please because of that link the branches to the trello card
