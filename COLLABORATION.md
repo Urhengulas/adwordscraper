@@ -21,6 +21,7 @@ The Adwordscraper is no open source project. It is developed in the context of t
   - [Git magic](#git-magic)
 - [Testing](#testing)
 - [Style guideline](#style-guideline)
+- [Travis CI](#travis-ci)
 
 
 ## What do you need?
@@ -146,3 +147,7 @@ To check the linting
 ```shell
 $ make lint
 ```
+
+
+## Travis CI
+TODO: Please explain our Travis integration @jo-fr
