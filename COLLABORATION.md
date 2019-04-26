@@ -18,6 +18,7 @@ The Adwordscraper is no open source project. It is developed in the context of t
     - [Pull request template](#pull-request-template)
     - [Conditions to pass](#conditions-to-pass)
   - [Commit messages](#commit-messages)
+  - [Git magic](#git-magic)
 - [Testing](#testing)
 - [Style guideline](#style-guideline)
 
@@ -115,6 +116,11 @@ TL;DR
    e.g. `"Create test_parse_for_filter in test_scraper.py"`  
    instead of [`"created test_scraper.py. created unit test test_parse_for_filter()"`](https://github.com/Urhengulas/adwordscraper/commit/4500a242e4561bcaa86b4564befab5f00baebf57)
 
+### Git magic 
+(aka. rebasing and force pushing)
+
+You are free to do all git-vodoo as long as you follow the ["Golden Rule of Rebasing"](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing) _(which also applies to the other git magic)_
+> Don't do it on public branches!
 
 ## Testing
 
