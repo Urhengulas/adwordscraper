@@ -4,14 +4,13 @@ ___
 
 ## Table of content
 
-- [adwordscraper](#adwordscraper)
-  - [Table of content](#table-of-content)
-  - [About](#about)
-  - [Getting started](#getting-started)
-    - [Development usage](#development-usage)
-    - [Production usage](#production-usage)
-  - [Documentation](#documentation)
-  - [Collaboration](#collaboration)
+- [Table of content](#table-of-content)
+- [About](#about)
+- [Getting started](#getting-started)
+  - [Development usage](#development-usage)
+  - [Production usage](#production-usage)
+- [Documentation](#documentation)
+- [Collaboration](#collaboration)
 
 ## About
 Searchig at google, besides the normal search results, also shows you `SearchAds`, which are fitting to the searched term. These differ for different users.  

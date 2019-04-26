@@ -5,22 +5,21 @@ The Adwordscraper is no open source project. It is developed in the context of t
 
 ## Table of content
 
-- [Collaboration Guideline](#collaboration-guideline)
-  - [Table of content](#table-of-content)
-  - [What do you need?](#what-do-you-need)
-  - [Task Management](#task-management)
-    - [Trello Board structure](#trello-board-structure)
-    - [Trello Card conventions](#trello-card-conventions)
-  - [Task filing](#task-filing)
-  - [Git Branching Model](#git-branching-model)
-    - [Master branch](#master-branch)
-    - [Feature branches](#feature-branches)
-    - [Pull requests](#pull-requests)
-      - [Pull request template](#pull-request-template)
-      - [Conditions to pass](#conditions-to-pass)
-    - [Commit messages](#commit-messages)
-  - [Testing](#testing)
-  - [Style guideline](#style-guideline)
+- [Table of content](#table-of-content)
+- [What do you need?](#what-do-you-need)
+- [Task Management](#task-management)
+  - [Trello Board structure](#trello-board-structure)
+  - [Trello Card conventions](#trello-card-conventions)
+- [Task filing](#task-filing)
+- [Git Branching Model](#git-branching-model)
+  - [Master branch](#master-branch)
+  - [Feature branches](#feature-branches)
+  - [Pull requests](#pull-requests)
+    - [Pull request template](#pull-request-template)
+    - [Conditions to pass](#conditions-to-pass)
+  - [Commit messages](#commit-messages)
+- [Testing](#testing)
+- [Style guideline](#style-guideline)
 
 
 ## What do you need?
