@@ -80,7 +80,7 @@ Our branching model is inspired by [Git Flow](https://nvie.com/posts/a-successfu
 ### Master branch
 
 We have a `master` branch, which aims to be stable all the time.  
-**Never push directly to master!**
+**Never push directly to master!** _(there are only rare exceptions)_
 
 ### Feature branches
 
