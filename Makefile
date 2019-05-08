@@ -31,7 +31,7 @@ notebook:
 	jupyter notebook
 
 test:
-	pytest
+	env-ads/bin/pytest -vv	
 
 lint:
 	env-ads/bin/pylint adscraper
