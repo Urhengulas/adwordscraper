@@ -20,7 +20,7 @@ python-setup:
 	env-ads/bin/pip install -r requirements.txt
 
 python-run:
-	python cli.py data/keywords.csv data/ads.csv
+	env-ads/bin/python cli.py data/keywords.csv data/ads.csv
 
 # additional commands
 notebook:
