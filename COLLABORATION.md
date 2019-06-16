@@ -1,6 +1,6 @@
 # Collaboration Guideline
 
-The Adwordscraper is no open source project. It is developed in the context of the "STS_Correctiv_Project".
+The Adwordscraper is developed in the context of the "STS_Correctiv_Project".
 
 
 ## Table of content
@@ -27,7 +27,7 @@ The Adwordscraper is no open source project. It is developed in the context of t
 ## What do you need?
 
 To start collaborating you need four things:
-- access to the private GitHub-Repo [`Urhengulas/adwordscraper`](https://github.com/Urhengulas/adwordscraper)  
+- access to the GitHub-Repo [`Urhengulas/adwordscraper`](https://github.com/Urhengulas/adwordscraper)  
   _(you probably have that, if you are reading this ;D )_
 - access to the Trello Board [`correctiv - CODE/Adwordscraper`](https://trello.com/b/wHsCHEqk/adwordscraper)
 - working installation of [Python (version: 3.6+)](https://www.python.org/about/gettingstarted/)
