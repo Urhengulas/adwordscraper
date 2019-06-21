@@ -12,5 +12,5 @@ def test_get_keywords():
 
     # test if right keywords get extracted
     keywords = csv_handler.get_keywords('tests/test.csv')
-    test_keywords = ["This ", "Are", "TEST", "keywords"]
+    test_keywords = ["This", "Are", "TEST", "keywords"]
     assert keywords == test_keywords
