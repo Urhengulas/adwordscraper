@@ -14,13 +14,13 @@ docker-run:
 # use via python directly
 python-setup:
 	# is env-ads already existing?
-	if [ ! -d "env-ads" ];then virtualenv env-ads;fi
+	if [ ! -d "env" ];then virtualenv env;fi
 
 	# install requirements
-	env-ads/bin/pip install -r requirements.txt
+	env/bin/pip install -r requirements.txt
 
 python-run:
-	env-ads/bin/python cli.py data/keywords.csv data/ads.csv
+	env/bin/python cli.py data/keywords.csv data/ads.csv
 
 # additional commands
 notebook:
@@ -31,9 +31,9 @@ notebook:
 	jupyter notebook
 
 test:
-	env-ads/bin/pytest -vv	
+	env/bin/pytest -vv	
 
 lint:
-	env-ads/bin/pylint adscraper
-	env-ads/bin/pylint tests
-	env-ads/bin/pylint cli.py
+	env/bin/pylint adscraper
+	env/bin/pylint tests
+	env/bin/pylint cli.py
